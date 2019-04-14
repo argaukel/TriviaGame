@@ -141,15 +141,15 @@ function Decrement() {
     currentSeconds = secs % 60;
     if(currentSeconds <= 9) currentSeconds = "0" + currentSeconds;
     secs--;
-    document.getElementById("timerText").innerHTML = "Time's up in: " + currentMinutes + ":" + currentSeconds; //Set the element id you need the time put into.
+    document.getElementById("timerText").innerHTML = "Time's up in: " + currentMinutes + ":" + currentSeconds; 
     if(secs !== -1) setTimeout('Decrement()',1000);
     $('quizBowl').show();
     // trying to hide quiz div at timeout
-    if(secs == 0) {
-      showResults();
-      $('quizBowl').hide()
+    // if(secs == 0) {
+    //   showResults();
+    //   $('quizBowl').hide()
 
-    }
+    // }
 }
 
   
