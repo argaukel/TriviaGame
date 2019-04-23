@@ -7,32 +7,42 @@ var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
 var myQuestions = [
     {
-      question: "Chrissy's last name is...",
+      question: "Yellow + Blue makes...",
       answers: {
-        a: "Teigan",
-        b: "Tiegen",
-        c: "Teigen",
-        d: "Tiegen"
+        a: "Purple",
+        b: "Still Blue",
+        c: "Green",
+        d: "Puse"
       },
       correctAnswer: "c"
     },
     {
-      question: "When is Chrissy's birthday?",
+      question: "What three colors are a more relevant group of Primary colors?",
       answers: {
-        a: "March 6",
-        b: "December 24",
-        c: "November 30",
-        d: "July 14"
+        a: "Red, Yellow, Blue",
+        b: "Red, Blue, Green",
+        c: "Cyan, Magenta, Yellow",
+        d: "Red White & Blue"
       },
       correctAnswer: "c"
     },
     {
-      question: "What is Chrissy's net worth?",
+      question: "How do we know that a prism breaks up into the 7 colors of Red, Orange, Yellow, Blue, Indigo and Violet?",
       answers: {
-        a: "12 million",
-        b: "18 million + undisclosed sum in trust",
-        c: "undisclosed",
-        d: "26 million"
+        a: "It's a literal spectrum",
+        b: "There's no difference between Indigo and Violet. 7 is arbitrary",
+        c: "That's just like...your opinion",
+        d: "Otherwise the acronym isn't as cute"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "What happens if you combine Cyan, Magenta and Yellow light?",
+      answers: {
+        a: "A Mess",
+        b: "The Zack Snyder Cut",
+        c: "The Diamond Authority",
+        d: "White Light"
       },
       correctAnswer: "d"
     }
@@ -143,13 +153,13 @@ function Decrement() {
     secs--;
     document.getElementById("timerText").innerHTML = "Time's up in: " + currentMinutes + ":" + currentSeconds; 
     if(secs !== -1) setTimeout('Decrement()',1000);
-    $('quizBowl').show();
+    // $('quizBowl').show();
     // trying to hide quiz div at timeout
-    // if(secs == 0) {
-    //   showResults();
-    //   $('quizBowl').hide()
-
-    // }
+    if(secs == 0) {
+      showResults();
+      $('quizBowl').hide()
+      document.getElementById("timerText").innerHTML = "Time's up!";
+    }
 }
 
   
